@@ -16,7 +16,7 @@ public class Homework1 {
         int totalSum = calculateTotalSum(loanValue, firstAnnualInterest, secondAnnualInterest, thirdAnnualInterest, period);
         System.out.println("Total credit sum = " + totalSum + ".");
 
-        Assertions.assertEquals(105600, totalSum);
+        Assertions.assertEquals(105600, totalSum, "TEST FAILED");
     }
 
     public int calculateTotalSum(int loanValue, int firstAnnualInterest, int secondAnnualInterest, int thirdAnnualInterest, int period) {
