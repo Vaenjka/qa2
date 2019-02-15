@@ -14,7 +14,7 @@ public class Homework1 {
         int period = termInYear / 10;
 
         int totalSum = calculateTotalSum(loanValue, firstAnnualInterest, secondAnnualInterest, thirdAnnualInterest, period);
-        System.out.println("Total credit sum = " + totalSum);
+        System.out.println("Total credit sum = " + totalSum + ".");
 
         Assertions.assertEquals(105600, totalSum);
     }
