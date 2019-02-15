@@ -5,7 +5,7 @@ public class Homework1 {
 
     @Test
     public void loan() {
-        int loanSum = 90000;
+        int loanValue = 90000;
         int firstAnnualInterest = 10;
         int secondAnnualInterest = 8;
         int thirdAnnualInterest = 6;
@@ -13,14 +13,14 @@ public class Homework1 {
 
         int period = termInYear / 10;
 
-        int totalSum = calculateTotalSum(loanSum, firstAnnualInterest, secondAnnualInterest, thirdAnnualInterest, period);
+        int totalSum = calculateTotalSum(loanValue, firstAnnualInterest, secondAnnualInterest, thirdAnnualInterest, period);
         System.out.println("Total credit sum = " + totalSum);
 
         Assertions.assertEquals(105600, totalSum);
     }
 
-    public int calculateTotalSum(int creditSum, int firstPercent, int secondPercent, int thirdPercent, int period) {
-        return ((creditSum) * firstPercent / 100) + ((creditSum / period * 2) * secondPercent / 100)
-                + ((creditSum / period) * thirdPercent / 100) + creditSum;
+    public int calculateTotalSum(int loanValue, int firstAnnualInterest, int secondAnnualInterest, int thirdAnnualInterest, int period) {
+        return ((loanValue) * firstAnnualInterest / 100) + ((loanValue / period * 2) * secondAnnualInterest / 100)
+                + ((loanValue / period) * thirdAnnualInterest / 100) + loanValue;
     }
 }
