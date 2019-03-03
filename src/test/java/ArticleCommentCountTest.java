@@ -13,7 +13,7 @@ public class ArticleCommentCountTest {
     private final By FIRST_ARTICLE = By.xpath(".//h1[contains(@class, 'headline__title')]");
     private final By ARTICLE_PAGE_COMMENT_COUNT = By.xpath(".//a[contains(@class, '19')]");
     private final By ANONYMOUS_COMMENT_COUNT = By.xpath(".//span[contains(@class, 'cnt')]");
-    private final By REGISTER_COMMENT_COUNT = By.xpath("//*[@id=\"content-window\"]/div/div[1]/ul/li[2]/span/span");
+    private final By REGISTER_COMMENT_COUNT = By.xpath("(.//span[@class='select-type-text']/span)[2]");
 
     @Test
     public void commentCountTest() {
